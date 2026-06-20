@@ -2,7 +2,7 @@
 
 **Stanford CS224N (Winter 2026) Final Project**
 
-![Pipeline overview](figures/Figure1.JPG)
+![Comparison of Supervision Formats](figures/figure1_cropped.png)
 
 ## Overview
 
@@ -62,10 +62,9 @@ cs224n-coding-agent/
 │   ├── run_s1000_safe.py                              <- tournament runner
 │   └── run_examples.sh                                <- example commands
 ├── figures/
-│   └── Figure1.JPG                                    <- pipeline diagram
+│   └── figure1_cropped.png                            <- supervision format comparison
 ├── CS224N__Project_Final_Report_Template_20263__1_.pdf <- final report
-├── coding_agent.pdf                                   <- project poster/slides
-├── postershow.pdf                                     <- poster presentation
+├── coding_agent.pdf                                   <- project slides
 └── metadata.yml
 ```
 
@@ -121,7 +120,6 @@ See [`code/README.md`](code/README.md) for complete instructions.
 ## Report & Poster
 
 - [Final Report (PDF)](CS224N__Project_Final_Report_Template_20263__1_.pdf)
-- [Project Poster (PDF)](postershow.pdf)
 - [Slides (PDF)](coding_agent.pdf)
 
 ## License
