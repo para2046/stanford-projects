@@ -1,0 +1,166 @@
+experiment_id,game,run_id,round,player_a_label,player_b_label,winner,player_a_score,player_b_score,tie_score,notes
+2turn_vs_qwen30b_260307110538,BattleSnake,260307110538,1,SFT,Qwen,Tie,0,0,1000,
+2turn_vs_qwen30b_260307110538,BattleSnake,260307110538,2,SFT,Qwen,Qwen,72,536,383,
+2turn_vs_qwen30b_260307110538,BattleSnake,260307110538,3,SFT,Qwen,Qwen,66,516,418,
+2turn_vs_qwen30b_260307110538,BattleSnake,260307110538,4,SFT,Qwen,Tie,0,0,1000,
+2turn_vs_qwen30b_260307110538,BattleSnake,260307110538,5,SFT,Qwen,Qwen,121,473,404,
+2turn_vs_qwen30b_260307110538,BattleSnake,260307110538,6,SFT,Qwen,Qwen,14,970,8,
+2turn_vs_qwen30b_260307110538,BattleSnake,260307110538,7,SFT,Qwen,Qwen,30,562,407,
+2turn_vs_qwen30b_260307110538,BattleSnake,260307110538,8,SFT,Qwen,Qwen,26,584,388,
+2turn_vs_qwen30b_260307110538,BattleSnake,260307110538,9,SFT,Qwen,Qwen,23,608,367,
+2turn_vs_qwen30b_260307110538,BattleSnake,260307110538,10,SFT,Qwen,Qwen,40,572,382,
+2turn_vs_qwen30b_260307110538,BattleSnake,260307110538,11,SFT,Qwen,Qwen,21,596,360,
+2turn_vs_qwen30b_260307110538,BattleSnake,260307110538,12,SFT,Qwen,Qwen,27,595,377,
+2turn_vs_qwen30b_260307110538,BattleSnake,260307110538,13,SFT,Qwen,Qwen,13,627,360,
+2turn_vs_qwen30b_260307110538,BattleSnake,260307110538,14,SFT,Qwen,Qwen,33,555,411,
+2turn_vs_qwen30b_260307110538,BattleSnake,260307110538,15,SFT,Qwen,SFT,926,26,29,
+8turn_vs_qwen30b_new,BattleSnake,,1,SFT,Qwen,Qwen,81,503,413,user provided table
+8turn_vs_qwen30b_new,BattleSnake,,2,SFT,Qwen,Qwen,93,461,443,user provided table
+8turn_vs_qwen30b_new,BattleSnake,,3,SFT,Qwen,Qwen,105,459,433,user provided table
+8turn_vs_qwen30b_new,BattleSnake,,4,SFT,Qwen,Qwen,109,466,423,user provided table
+8turn_vs_qwen30b_new,BattleSnake,,5,SFT,Qwen,Tie,136,278,585,user provided table
+8turn_vs_qwen30b_new,BattleSnake,,6,SFT,Qwen,Qwen,69,660,271,user provided table
+8turn_vs_qwen30b_new,BattleSnake,,7,SFT,Qwen,Qwen,100,494,397,user provided table
+8turn_vs_qwen30b_new,BattleSnake,,8,SFT,Qwen,Qwen,1,997,1,user provided table
+8turn_vs_qwen30b_new,BattleSnake,,9,SFT,Qwen,Qwen,56,611,331,user provided table
+8turn_vs_qwen30b_new,BattleSnake,,10,SFT,Qwen,SFT,715,224,60,user provided table
+8turn_vs_qwen30b_new,BattleSnake,,11,SFT,Qwen,Tie,0,0,1000,user provided table
+8turn_vs_qwen30b_new,BattleSnake,,12,SFT,Qwen,Qwen,6,978,1,user provided table
+8turn_vs_qwen30b_new,BattleSnake,,13,SFT,Qwen,Qwen,64,537,391,user provided table
+8turn_vs_qwen30b_new,BattleSnake,,14,SFT,Qwen,Qwen,52,543,403,user provided table
+8turn_vs_qwen30b_new,BattleSnake,,15,SFT,Qwen,Qwen,15,848,136,user provided table
+4turn_vs_qwen30b_260307060026,BattleSnake,260307060026,1,SFT,Qwen,SFT,607,86,292,
+4turn_vs_qwen30b_260307060026,BattleSnake,260307060026,2,SFT,Qwen,SFT,802,183,13,
+4turn_vs_qwen30b_260307060026,BattleSnake,260307060026,3,SFT,Qwen,SFT,699,271,24,
+4turn_vs_qwen30b_260307060026,BattleSnake,260307060026,4,SFT,Qwen,Tie,0,0,1000,Qwen run_server missing
+4turn_vs_qwen30b_260307060026,BattleSnake,260307060026,5,SFT,Qwen,Qwen,158,586,251,
+4turn_vs_qwen30b_260307060026,BattleSnake,260307060026,6,SFT,Qwen,Tie,0,0,1000,Qwen run_server missing
+4turn_vs_qwen30b_260307060026,BattleSnake,260307060026,7,SFT,Qwen,SFT,425,233,336,
+4turn_vs_qwen30b_260307060026,BattleSnake,260307060026,8,SFT,Qwen,SFT,388,247,364,
+4turn_vs_qwen30b_260307060026,BattleSnake,260307060026,9,SFT,Qwen,Tie,172,252,564,
+4turn_vs_qwen30b_260307060026,BattleSnake,260307060026,10,SFT,Qwen,SFT,664,310,25,
+4turn_vs_qwen30b_260307060026,BattleSnake,260307060026,11,SFT,Qwen,Qwen,440,549,7,
+4turn_vs_qwen30b_260307060026,BattleSnake,260307060026,12,SFT,Qwen,Tie,0,0,1000,SFT run_server missing
+4turn_vs_qwen30b_260307060026,BattleSnake,260307060026,13,SFT,Qwen,Tie,0,0,1000,SFT run_server missing
+4turn_vs_qwen30b_260307060026,BattleSnake,260307060026,14,SFT,Qwen,Tie,0,0,1000,SFT run_server missing
+4turn_vs_qwen30b_260307060026,BattleSnake,260307060026,15,SFT,Qwen,Tie,0,0,1000,SFT run_server missing
+weighted_vs_qwen30b_260307132150,BattleSnake,260307132150,1,SFT,Qwen,Qwen,99,877,15,
+weighted_vs_qwen30b_260307132150,BattleSnake,260307132150,2,SFT,Qwen,Qwen,60,788,151,
+weighted_vs_qwen30b_260307132150,BattleSnake,260307132150,3,SFT,Qwen,SFT,920,3,74,
+weighted_vs_qwen30b_260307132150,BattleSnake,260307132150,4,SFT,Qwen,Qwen,60,803,136,
+weighted_vs_qwen30b_260307132150,BattleSnake,260307132150,5,SFT,Qwen,Tie,0,0,1000,Qwen service unavailable
+weighted_vs_qwen30b_260307132150,BattleSnake,260307132150,6,SFT,Qwen,Tie,169,411,415,
+weighted_vs_qwen30b_260307132150,BattleSnake,260307132150,7,SFT,Qwen,Qwen,169,431,398,
+weighted_vs_qwen30b_260307132150,BattleSnake,260307132150,8,SFT,Qwen,Qwen,186,429,384,
+weighted_vs_qwen30b_260307132150,BattleSnake,260307132150,9,SFT,Qwen,SFT,426,255,300,
+weighted_vs_qwen30b_260307132150,BattleSnake,260307132150,10,SFT,Qwen,Tie,0,0,1000,Qwen startup block broken
+weighted_vs_qwen30b_260307132150,BattleSnake,260307132150,11,SFT,Qwen,SFT,385,271,341,
+weighted_vs_qwen30b_260307132150,BattleSnake,260307132150,12,SFT,Qwen,SFT,1000,0,0,
+weighted_vs_qwen30b_260307132150,BattleSnake,260307132150,13,SFT,Qwen,Tie,194,311,493,
+weighted_vs_qwen30b_260307132150,BattleSnake,260307132150,14,SFT,Qwen,Tie,208,333,459,
+weighted_vs_qwen30b_260307132150,BattleSnake,260307132150,15,SFT,Qwen,Qwen,112,473,412,
+4turn_vs_weighted_260308034950,BattleSnake,260308034950,1,4turn,weighted,weighted,105,883,7,provided table starts at r1
+4turn_vs_weighted_260308034950,BattleSnake,260308034950,2,4turn,weighted,4turn,493,108,399,provided table starts at r1
+4turn_vs_weighted_260308034950,BattleSnake,260308034950,3,4turn,weighted,4turn,463,109,426,provided table starts at r1
+4turn_vs_weighted_260308034950,BattleSnake,260308034950,4,4turn,weighted,Tie,223,197,578,provided table starts at r1
+4turn_vs_weighted_260308034950,BattleSnake,260308034950,5,4turn,weighted,weighted,1,990,5,provided table starts at r1
+4turn_vs_weighted_260308034950,BattleSnake,260308034950,6,4turn,weighted,Tie,185,211,598,provided table starts at r1
+4turn_vs_weighted_260308034950,BattleSnake,260308034950,7,4turn,weighted,Tie,235,214,550,provided table starts at r1
+4turn_vs_weighted_260308034950,BattleSnake,260308034950,8,4turn,weighted,4turn,524,215,255,provided table starts at r1
+4turn_vs_weighted_260308034950,BattleSnake,260308034950,9,4turn,weighted,4turn,575,203,222,provided table starts at r1
+4turn_vs_weighted_260308034950,BattleSnake,260308034950,10,4turn,weighted,4turn,570,184,240,provided table starts at r1
+4turn_vs_weighted_260308034950,BattleSnake,260308034950,11,4turn,weighted,4turn,577,186,233,provided table starts at r1
+4turn_vs_weighted_260308034950,BattleSnake,260308034950,12,4turn,weighted,4turn,557,176,265,provided table starts at r1
+4turn_vs_weighted_260308034950,BattleSnake,260308034950,13,4turn,weighted,weighted,2,959,36,provided table starts at r1
+4turn_vs_weighted_260308034950,BattleSnake,260308034950,14,4turn,weighted,Tie,0,0,1000,runtime failure; provided table starts at r1
+4turn_vs_weighted_260308034950,BattleSnake,260308034950,15,4turn,weighted,4turn,574,193,233,provided table starts at r1
+6turn_vs_qwenplus_260311125520,BattleSnake,260311125520,1,6turn,qwenplus,6turn,967,18,14,
+6turn_vs_qwenplus_260311125520,BattleSnake,260311125520,2,6turn,qwenplus,6turn,962,16,21,
+6turn_vs_qwenplus_260311125520,BattleSnake,260311125520,3,6turn,qwenplus,6turn,973,15,12,
+6turn_vs_qwenplus_260311125520,BattleSnake,260311125520,4,6turn,qwenplus,6turn,969,14,16,
+6turn_vs_qwenplus_260311125520,BattleSnake,260311125520,5,6turn,qwenplus,Tie,0,0,1000,0/0/1000; both valid_submit true
+6turn_vs_qwenplus_260311125520,BattleSnake,260311125520,6,6turn,qwenplus,6turn,977,14,7,
+6turn_vs_qwenplus_260311125520,BattleSnake,260311125520,7,6turn,qwenplus,6turn,975,9,14,
+6turn_vs_qwenplus_260311125520,BattleSnake,260311125520,8,6turn,qwenplus,Tie,0,0,1000,0/0/1000; both valid_submit true
+6turn_vs_qwenplus_260311125520,BattleSnake,260311125520,9,6turn,qwenplus,6turn,990,2,5,
+6turn_vs_qwenplus_260311125520,BattleSnake,260311125520,10,6turn,qwenplus,6turn,781,116,85,
+6turn_vs_qwenplus_260311125520,BattleSnake,260311125520,11,6turn,qwenplus,6turn,774,98,95,
+6turn_vs_qwenplus_260311125520,BattleSnake,260311125520,12,6turn,qwenplus,6turn,821,84,77,
+6turn_vs_qwenplus_260311125520,BattleSnake,260311125520,13,6turn,qwenplus,6turn,754,202,43,
+6turn_vs_qwenplus_260311125520,BattleSnake,260311125520,14,6turn,qwenplus,6turn,732,210,58,
+6turn_vs_qwenplus_260311125520,BattleSnake,260311125520,15,6turn,qwenplus,6turn,1000,0,0,qwenplus valid_submit=false; missing info/start/end/move
+weighted_vs_selfplay_260309124344,BattleSnake,260309124344,1,w10a,selfplaysft,w10a,782,206,10,
+weighted_vs_selfplay_260309124344,BattleSnake,260309124344,2,w10a,selfplaysft,Tie,0,0,1000,0/0/1000
+weighted_vs_selfplay_260309124344,BattleSnake,260309124344,3,w10a,selfplaysft,w10a,778,188,1,
+weighted_vs_selfplay_260309124344,BattleSnake,260309124344,4,w10a,selfplaysft,w10a,1000,0,0,selfplaysft valid_submit=false; selfplaysft invalid: There should be a `def move(` function implemented in `main.py` | Don't change the function signatures!
+weighted_vs_selfplay_260309124344,BattleSnake,260309124344,5,w10a,selfplaysft,w10a,466,218,9,
+weighted_vs_selfplay_260309124344,BattleSnake,260309124344,6,w10a,selfplaysft,selfplaysft,211,251,10,
+weighted_vs_selfplay_260309124344,BattleSnake,260309124344,7,w10a,selfplaysft,Tie,0,0,1000,0/0/1000
+weighted_vs_selfplay_260309124344,BattleSnake,260309124344,8,w10a,selfplaysft,Tie,0,0,1000,0/0/1000
+weighted_vs_selfplay_260309124344,BattleSnake,260309124344,9,w10a,selfplaysft,Tie,0,0,1000,0/0/1000
+weighted_vs_selfplay_260309124344,BattleSnake,260309124344,10,w10a,selfplaysft,Tie,0,0,1000,0/0/1000
+weighted_vs_selfplay_260309124344,BattleSnake,260309124344,11,w10a,selfplaysft,Tie,0,0,1000,0/0/1000
+weighted_vs_selfplay_260309124344,BattleSnake,260309124344,12,w10a,selfplaysft,Tie,0,0,1000,0/0/1000
+weighted_vs_selfplay_260309124344,BattleSnake,260309124344,13,w10a,selfplaysft,Tie,0,0,1000,0/0/1000
+weighted_vs_selfplay_260309124344,BattleSnake,260309124344,14,w10a,selfplaysft,Tie,0,0,1000,0/0/1000
+weighted_vs_selfplay_260309124344,BattleSnake,260309124344,15,w10a,selfplaysft,Tie,0,0,1000,0/0/1000
+sft_6turns_vs_qwen30b_battlesnake_r15_s1000_260309143501,BattleSnake,260309143501,1,6turn,Qwen,6turn,485,171,338,
+sft_6turns_vs_qwen30b_battlesnake_r15_s1000_260309143501,BattleSnake,260309143501,2,6turn,Qwen,Tie,0,0,1000,0/0/1000
+sft_6turns_vs_qwen30b_battlesnake_r15_s1000_260309143501,BattleSnake,260309143501,3,6turn,Qwen,6turn,461,163,372,
+sft_6turns_vs_qwen30b_battlesnake_r15_s1000_260309143501,BattleSnake,260309143501,4,6turn,Qwen,6turn,477,164,358,
+sft_6turns_vs_qwen30b_battlesnake_r15_s1000_260309143501,BattleSnake,260309143501,5,6turn,Qwen,6turn,475,165,356,
+sft_6turns_vs_qwen30b_battlesnake_r15_s1000_260309143501,BattleSnake,260309143501,6,6turn,Qwen,6turn,823,57,119,
+sft_6turns_vs_qwen30b_battlesnake_r15_s1000_260309143501,BattleSnake,260309143501,7,6turn,Qwen,6turn,812,77,104,
+sft_6turns_vs_qwen30b_battlesnake_r15_s1000_260309143501,BattleSnake,260309143501,8,6turn,Qwen,6turn,852,57,91,
+sft_6turns_vs_qwen30b_battlesnake_r15_s1000_260309143501,BattleSnake,260309143501,9,6turn,Qwen,6turn,419,258,322,
+sft_6turns_vs_qwen30b_battlesnake_r15_s1000_260309143501,BattleSnake,260309143501,10,6turn,Qwen,6turn,788,94,118,
+sft_6turns_vs_qwen30b_battlesnake_r15_s1000_260309143501,BattleSnake,260309143501,11,6turn,Qwen,Tie,350,290,359,
+sft_6turns_vs_qwen30b_battlesnake_r15_s1000_260309143501,BattleSnake,260309143501,12,6turn,Qwen,Qwen,3,949,47,
+sft_6turns_vs_qwen30b_battlesnake_r15_s1000_260309143501,BattleSnake,260309143501,13,6turn,Qwen,Qwen,1,953,44,
+sft_6turns_vs_qwen30b_battlesnake_r15_s1000_260309143501,BattleSnake,260309143501,14,6turn,Qwen,Tie,0,0,1000,0/0/1000
+sft_6turns_vs_qwen30b_battlesnake_r15_s1000_260309143501,BattleSnake,260309143501,15,6turn,Qwen,Qwen,2,990,2,
+sft_weighted5k_vs_qwen30b_battlesnake_r15_s1000_260309165959,BattleSnake,260309165959,1,weighted5k,Qwen,Qwen,94,889,16,
+sft_weighted5k_vs_qwen30b_battlesnake_r15_s1000_260309165959,BattleSnake,260309165959,2,weighted5k,Qwen,Qwen,0,1000,0,weighted5k valid_submit=false; weighted5k invalid: There should be a `def info(` function implemented in `main.py` | There should be a `def start(` function implemented in `main.py` | There should be a `def end(` function implemented in `main.py` | There should be a `def move(` function implemented in `main.py` | Don't change the function signatures!
+sft_weighted5k_vs_qwen30b_battlesnake_r15_s1000_260309165959,BattleSnake,260309165959,3,weighted5k,Qwen,Qwen,0,1000,0,weighted5k valid_submit=false; weighted5k invalid: There should be a `def info(` function implemented in `main.py` | There should be a `def start(` function implemented in `main.py` | There should be a `def end(` function implemented in `main.py` | There should be a `def move(` function implemented in `main.py` | Don't change the function signatures!
+sft_weighted5k_vs_qwen30b_battlesnake_r15_s1000_260309165959,BattleSnake,260309165959,4,weighted5k,Qwen,Qwen,0,1000,0,weighted5k valid_submit=false; weighted5k invalid: There should be a `def info(` function implemented in `main.py` | There should be a `def start(` function implemented in `main.py` | There should be a `def end(` function implemented in `main.py` | There should be a `def move(` function implemented in `main.py` | Don't change the function signatures!
+sft_weighted5k_vs_qwen30b_battlesnake_r15_s1000_260309165959,BattleSnake,260309165959,5,weighted5k,Qwen,Qwen,0,1000,0,weighted5k valid_submit=false; weighted5k invalid: There should be a `def info(` function implemented in `main.py` | There should be a `def start(` function implemented in `main.py` | There should be a `def end(` function implemented in `main.py` | There should be a `def move(` function implemented in `main.py` | Don't change the function signatures!
+sft_weighted5k_vs_qwen30b_battlesnake_r15_s1000_260309165959,BattleSnake,260309165959,6,weighted5k,Qwen,Qwen,0,1000,0,weighted5k valid_submit=false; weighted5k invalid: There should be a `def info(` function implemented in `main.py` | There should be a `def start(` function implemented in `main.py` | There should be a `def end(` function implemented in `main.py` | Don't change the function signatures!
+sft_weighted5k_vs_qwen30b_battlesnake_r15_s1000_260309165959,BattleSnake,260309165959,7,weighted5k,Qwen,Qwen,0,1000,0,weighted5k valid_submit=false; weighted5k invalid: There should be a `def info(` function implemented in `main.py` | There should be a `def start(` function implemented in `main.py` | There should be a `def end(` function implemented in `main.py` | Don't change the function signatures!
+sft_weighted5k_vs_qwen30b_battlesnake_r15_s1000_260309165959,BattleSnake,260309165959,8,weighted5k,Qwen,Qwen,0,1000,0,weighted5k valid_submit=false; weighted5k invalid: There should be a `def info(` function implemented in `main.py` | There should be a `def start(` function implemented in `main.py` | There should be a `def end(` function implemented in `main.py` | Don't change the function signatures!
+sft_weighted5k_vs_qwen30b_battlesnake_r15_s1000_260309165959,BattleSnake,260309165959,9,weighted5k,Qwen,Qwen,0,1000,0,weighted5k valid_submit=false; weighted5k invalid: There should be a `def info(` function implemented in `main.py` | There should be a `def start(` function implemented in `main.py` | There should be a `def end(` function implemented in `main.py` | Don't change the function signatures!
+sft_weighted5k_vs_qwen30b_battlesnake_r15_s1000_260309165959,BattleSnake,260309165959,10,weighted5k,Qwen,Tie,0,0,1000,0/0/1000
+sft_weighted5k_vs_qwen30b_battlesnake_r15_s1000_260309165959,BattleSnake,260309165959,11,weighted5k,Qwen,Tie,0,0,1000,0/0/1000
+sft_weighted5k_vs_qwen30b_battlesnake_r15_s1000_260309165959,BattleSnake,260309165959,12,weighted5k,Qwen,Tie,0,0,1000,0/0/1000
+sft_weighted5k_vs_qwen30b_battlesnake_r15_s1000_260309165959,BattleSnake,260309165959,13,weighted5k,Qwen,Tie,0,0,1000,0/0/1000
+sft_weighted5k_vs_qwen30b_battlesnake_r15_s1000_260309165959,BattleSnake,260309165959,14,weighted5k,Qwen,Tie,0,0,1000,0/0/1000
+sft_weighted5k_vs_qwen30b_battlesnake_r15_s1000_260309165959,BattleSnake,260309165959,15,weighted5k,Qwen,Tie,0,0,1000,0/0/1000
+sft_6turns_vs_weighted1k_battlesnake_r15_s1000_260310014746,BattleSnake,260310014746,1,6turn,weighted,6turn,933,9,54,
+sft_6turns_vs_weighted1k_battlesnake_r15_s1000_260310014746,BattleSnake,260310014746,2,6turn,weighted,6turn,672,51,276,
+sft_6turns_vs_weighted1k_battlesnake_r15_s1000_260310014746,BattleSnake,260310014746,3,6turn,weighted,6turn,464,176,360,
+sft_6turns_vs_weighted1k_battlesnake_r15_s1000_260310014746,BattleSnake,260310014746,4,6turn,weighted,Tie,434,82,482,
+sft_6turns_vs_weighted1k_battlesnake_r15_s1000_260310014746,BattleSnake,260310014746,5,6turn,weighted,6turn,971,6,21,
+sft_6turns_vs_weighted1k_battlesnake_r15_s1000_260310014746,BattleSnake,260310014746,6,6turn,weighted,6turn,593,183,223,
+sft_6turns_vs_weighted1k_battlesnake_r15_s1000_260310014746,BattleSnake,260310014746,7,6turn,weighted,6turn,669,127,202,
+sft_6turns_vs_weighted1k_battlesnake_r15_s1000_260310014746,BattleSnake,260310014746,8,6turn,weighted,6turn,648,142,210,
+sft_6turns_vs_weighted1k_battlesnake_r15_s1000_260310014746,BattleSnake,260310014746,9,6turn,weighted,weighted,490,500,10,
+sft_6turns_vs_weighted1k_battlesnake_r15_s1000_260310014746,BattleSnake,260310014746,10,6turn,weighted,Tie,493,493,12,
+sft_6turns_vs_weighted1k_battlesnake_r15_s1000_260310014746,BattleSnake,260310014746,11,6turn,weighted,6turn,498,492,7,
+sft_6turns_vs_weighted1k_battlesnake_r15_s1000_260310014746,BattleSnake,260310014746,12,6turn,weighted,6turn,510,481,9,
+sft_6turns_vs_weighted1k_battlesnake_r15_s1000_260310014746,BattleSnake,260310014746,13,6turn,weighted,6turn,503,493,4,
+sft_6turns_vs_weighted1k_battlesnake_r15_s1000_260310014746,BattleSnake,260310014746,14,6turn,weighted,Tie,0,0,1000,0/0/1000
+sft_6turns_vs_weighted1k_battlesnake_r15_s1000_260310014746,BattleSnake,260310014746,15,6turn,weighted,6turn,484,476,15,
+sft_6turns_vs_claude45_battlesnake_r15_s1000_260310042215,BattleSnake,260310042215,1,6turn,claude45,claude45,318,679,3,
+sft_6turns_vs_claude45_battlesnake_r15_s1000_260310042215,BattleSnake,260310042215,2,6turn,claude45,claude45,280,716,2,
+sft_6turns_vs_claude45_battlesnake_r15_s1000_260310042215,BattleSnake,260310042215,3,6turn,claude45,claude45,309,686,5,
+sft_6turns_vs_claude45_battlesnake_r15_s1000_260310042215,BattleSnake,260310042215,4,6turn,claude45,claude45,220,774,4,
+sft_6turns_vs_claude45_battlesnake_r15_s1000_260310042215,BattleSnake,260310042215,5,6turn,claude45,claude45,297,694,9,
+sft_6turns_vs_claude45_battlesnake_r15_s1000_260310042215,BattleSnake,260310042215,6,6turn,claude45,claude45,212,787,1,
+sft_6turns_vs_claude45_battlesnake_r15_s1000_260310042215,BattleSnake,260310042215,7,6turn,claude45,claude45,214,783,3,
+sft_6turns_vs_claude45_battlesnake_r15_s1000_260310042215,BattleSnake,260310042215,8,6turn,claude45,claude45,226,768,5,
+sft_6turns_vs_claude45_battlesnake_r15_s1000_260310042215,BattleSnake,260310042215,9,6turn,claude45,claude45,220,777,2,
+sft_6turns_vs_claude45_battlesnake_r15_s1000_260310042215,BattleSnake,260310042215,10,6turn,claude45,claude45,222,769,8,
+sft_6turns_vs_claude45_battlesnake_r15_s1000_260310042215,BattleSnake,260310042215,11,6turn,claude45,claude45,234,761,3,
+sft_6turns_vs_claude45_battlesnake_r15_s1000_260310042215,BattleSnake,260310042215,12,6turn,claude45,claude45,206,789,5,
+sft_6turns_vs_claude45_battlesnake_r15_s1000_260310042215,BattleSnake,260310042215,13,6turn,claude45,claude45,225,772,3,
+sft_6turns_vs_claude45_battlesnake_r15_s1000_260310042215,BattleSnake,260310042215,14,6turn,claude45,claude45,202,792,6,
+sft_6turns_vs_claude45_battlesnake_r15_s1000_260310042215,BattleSnake,260310042215,15,6turn,claude45,claude45,212,780,8,

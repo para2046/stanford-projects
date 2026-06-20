@@ -1,0 +1,13 @@
+torch==2.10.0+cu128
+transformers==4.57.6
+xformers==0.0.35
+unsloth==2026.1.4
+unsloth_zoo==2026.1.4
+peft
+trl==0.24.0
+datasets
+accelerate
+tensorboard
+sentencepiece
+openai
+anthropic
