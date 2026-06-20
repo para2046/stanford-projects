@@ -15,14 +15,33 @@ We compare three SFT strategies:
 
 ## Key Results
 
-| Training Method | Win Rate vs Base Qwen3-Coder | Win Rate vs Claude Sonnet 4.5 |
-|----------------|----:|----:|
-| Base (no SFT) | 50.0% | — |
-| Vanilla SFT | — | — |
-| ReAct SFT | — | — |
-| TQ-SFT | — | — |
+**Preliminary baselines** (self-play, round-level):
 
-*See the full report for detailed tournament results across all model matchups.*
+| Player A | Player B | Winner | Win | Lose | Tie |
+|----------|----------|--------|----:|-----:|----:|
+| Qwen3-30B SFT (self-play) | Qwen3-Coder-30B base | Player A | 8 | 2 | 0 |
+| Qwen3-30B SFT (qwen-coder-plus) | Qwen3-Coder-30B base | Player B | 1 | 4 | 0 |
+| Qwen3-30B SFT (gemini-2.5-pro) | Qwen3-Coder-30B base | Player A | 2 | 1 | 0 |
+
+**Post-training ablation results** (ReAct SFT variants + TQ-SFT):
+
+| Variant | Opponent | Winner | Win | Lose | Tie |
+|---------|----------|--------|----:|-----:|----:|
+| ReAct 4 turn | Qwen3-Coder-30B base | Player A | 6 | 2 | 1 |
+| TQ-SFT | Qwen3-Coder-30B base | Player B | 5 | 6 | 3 |
+| ReAct 6 turn | Qwen3-Coder-30B base | Player A | 11 | 1 | 2 |
+| ReAct 6 turn | TQ-SFT | Player A | 3 | 1 | 0 |
+| ReAct 4 turn | TQ-SFT | Player A | 8 | 3 | 3 |
+
+**Final model tournament** (ReAct 6-turn, strongest variant):
+
+| Player A | Player B | Winner | Win | Lose | Tie |
+|----------|----------|--------|----:|-----:|----:|
+| ReAct 6 turn | Qwen3-Coder-30B base | Player A | 9 | 3 | 1 |
+| ReAct 6 turn | Qwen3-Coder-Plus | Player A | 12 | 0 | 0 |
+| ReAct 6 turn | Claude 4.5 | Player B | 0 | 15 | 0 |
+
+ReAct 6-turn substantially outperforms the base model and Qwen3-Coder-Plus, while Claude 4.5 remains clearly ahead.
 
 ## Pipeline
 
