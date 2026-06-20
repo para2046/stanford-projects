@@ -1,0 +1,53 @@
+# NavLM v2 — Python dependencies for the full pipeline
+#
+# Tested on Python 3.10. Use a fresh conda/venv environment.
+#
+#   conda create -n navlm python=3.10 -y && conda activate navlm
+#   pip install -r requirements.txt
+#
+# Note: the Modal training / eval scripts install their own
+# pinned versions of torch/transformers/peft inside the Modal
+# container — those pins live inside src/a2_train_modal.py and
+# src/a2_eval_modal.py and do NOT need to be in this file.
+# This file lists what is needed LOCALLY to run the data /
+# annotation / SFT-prep / figure-generation steps.
+
+# ─── core scientific stack ───────────────────────────────────────
+numpy>=1.24
+matplotlib>=3.7
+Pillow>=10.0
+tqdm>=4.65
+
+# ─── geo / OSM stack ─────────────────────────────────────────────
+osmnx>=1.9                   # OSM walking-graph fetch + projection
+networkx>=3.0                # graph operations on the walking graph
+pyproj>=3.6                  # UTM ↔ lat/lon conversion
+folium>=0.15                 # interactive Leaflet maps (viz/)
+
+# ─── DINOv2 + StreetView pipeline ────────────────────────────────
+torch>=2.1                   # for DINOv2 inference (CPU is OK)
+torchvision>=0.16            # transforms used by the DINOv2 wrapper
+transformers>=4.40           # for AutoModel('facebook/dinov2-large')
+requests>=2.31               # Google StreetView Static API
+
+# ─── video processing ────────────────────────────────────────────
+yt-dlp>=2024.1               # download walking-tour videos from YouTube
+# ffmpeg is invoked as a subprocess — install separately, e.g.
+#   conda install -c conda-forge ffmpeg
+
+# ─── teacher annotation (Gemini Pro 2.5) ─────────────────────────
+# src/gemini_api.py calls the Gemini API directly over HTTP via the
+# `requests` package above — no Google SDK required by default. If you
+# want to authenticate with a service-account JSON (instead of an API
+# key or `gcloud auth`), install the optional google-auth dep:
+#   pip install google-auth>=2.20
+# Without it, src/gemini_api.py falls through to shelling out to
+# `gcloud auth print-access-token` for Vertex auth.
+
+# ─── Modal serverless GPU (training + eval) ──────────────────────
+modal>=0.65                  # `modal token new` once before first run
+
+# ─── (optional) HTML visualisation / utility ─────────────────────
+# These are not strictly required to reproduce results but are used
+# by some of the QC viz scripts under src/a2_viz_*.py
+jinja2>=3.1                  # used by Folium templates

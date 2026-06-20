@@ -1,0 +1,255 @@
+<!DOCTYPE html><html><head><meta charset="utf-8">
+<title>a2 route GT examples</title>
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<style>
+    body { font: 13px -apple-system, Segoe UI, Helvetica, sans-serif;
+           background: #f5f5f5; margin: 16px; }
+    h1 { font-size: 18px; }
+    section.example { background: #fff; border: 1px solid #ddd;
+                       padding: 16px; border-radius: 8px;
+                       margin-bottom: 20px; }
+    section.fixed h2 { color: #2a9d8f; }
+    section.multi h2 { color: #e76f51; }
+    .grid { display: grid; grid-template-columns: 360px 1fr; gap: 16px; }
+    .left img.qframe { width: 100%; height: auto; max-height: 240px;
+                        object-fit: cover; border-radius: 4px;
+                        outline: 3px solid #3a86ff; outline-offset: -3px; }
+    table { border-collapse: collapse; width: 100%; margin-top: 8px;
+            font-size: 12px; }
+    table td, table th { padding: 4px 8px; border-bottom: 1px solid #eee;
+                          text-align: left; }
+    table.info td:first-child { color: #888; width: 50%; }
+    table.verbs th { background: #f0f0f0; }
+    .note { margin-top: 8px; font-size: 12px; color: #666; }
+    .map { height: 380px; width: 100%; border-radius: 4px;
+           border: 1px solid #ddd; }
+    h3 { font-size: 13px; margin: 10px 0 4px; }
+    </style></head><body>
+<h1>a2_route GT verbs — 3 fixed + 1 multi-answer example</h1>
+<div style="color:#666;font-size:12px;margin-bottom:14px;">For each row: walker (blue circle + arrow = heading), OSM shortest path (dashed red), destination (green pin). The verb-errors table shows the gap from <code>(heading + ACTION_DELTA[verb]) mod 360</code> to <code>first_edge_bearing</code>; the smallest gap wins.</div>
+
+<section class="example fixed">
+  <h2>FIXED-1: bahnhofstrasse/frame_00254 → Paradeplatz (阅兵广场)</h2>
+  <div class="grid">
+    <div class="left">
+      <img class="qframe" src="file:///C%3A/Users/z0502/Desktop/cs231n/navlm_v2/data/cities/zurich/frames/bahnhofstrasse/frame_00254.jpg" loading="lazy">
+      <table class="info">
+        <tr><td>Heading</td><td><b>0°</b></td></tr>
+        <tr><td>Route bearing (first edge)</td>
+            <td><b>178°</b></td></tr>
+        <tr><td>Route distance</td>
+            <td>434 m</td></tr>
+        <tr><td>First segment length</td>
+            <td>32 m</td></tr>
+        <tr><td>Sampling band</td><td>near</td></tr>
+        <tr><td>Destination kind</td><td>square</td></tr>
+      </table>
+      <h3>Verb errors (gap from new_heading to route_bearing)</h3>
+      <table class="verbs">
+        <tr><th>verb</th><th>error</th></tr>
+        <tr style="background:#fff3cd; font-weight:600;"><td>turn around</td><td>1.9°</td></tr><tr><td>turn right</td><td>88.1°</td></tr><tr><td>turn left</td><td>91.9°</td></tr><tr><td>continue ahead</td><td>178.1°</td></tr>
+      </table>
+      <div class="note">GT verb = <b>turn around</b>
+       (error 2°)</div>
+    </div>
+    <div class="right">
+      <div id="map1" class="map"></div>
+    </div>
+  </div>
+</section>
+<script>
+(function() {
+  const map = L.map("map1").fitBounds([[47.3690273,8.537668100000001],
+                                            [47.37361379999999,8.539640700000001]]);
+  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      maxZoom: 19,
+      attribution: '© OpenStreetMap'
+  }).addTo(map);
+  // walker position
+  L.circleMarker([47.373113799999985, 8.538168100000002], {
+      radius: 8, color: "#1f77b4", fillColor: "#1f77b4", fillOpacity: 0.7
+  }).addTo(map).bindPopup("WALKER · heading 0°");
+  // heading arrow
+  L.polyline([[47.373113799999985, 8.538168100000002], [47.37333902522521, 8.538168100000002]],
+             {color: "#1f77b4", weight: 4, opacity: 0.9}).addTo(map);
+  // route polyline
+  L.polyline([[47.373113799999985, 8.538168100000002], [47.3728229, 8.538182], [47.3723676, 8.5382138], [47.372273500000006, 8.5382372], [47.3717264, 8.5384376], [47.3711559, 8.5386385], [47.37104530000001, 8.5386679], [47.370764099999995, 8.5387735], [47.3706594, 8.5388239], [47.37002660000001, 8.5390576], [47.36995019999999, 8.5390863], [47.3699087, 8.5391407], [47.36960440000001, 8.5385876], [47.3695881, 8.5386609], [47.3695273, 8.5386652]],
+             {color: "#d62728", weight: 5, opacity: 0.7,
+              dashArray: '6,4'}).addTo(map)
+    .bindPopup("OSM shortest path — 14 segment(s)");
+  // destination
+  L.marker([47.3695273, 8.5386652]).addTo(map)
+    .bindPopup("DESTINATION · Paradeplatz");
+})();
+</script>
+
+
+<section class="example fixed">
+  <h2>FIXED-2: bahnhofstrasse/frame_00254 → Lindenhof (林登霍夫山丘)</h2>
+  <div class="grid">
+    <div class="left">
+      <img class="qframe" src="file:///C%3A/Users/z0502/Desktop/cs231n/navlm_v2/data/cities/zurich/frames/bahnhofstrasse/frame_00254.jpg" loading="lazy">
+      <table class="info">
+        <tr><td>Heading</td><td><b>0°</b></td></tr>
+        <tr><td>Route bearing (first edge)</td>
+            <td><b>359°</b></td></tr>
+        <tr><td>Route distance</td>
+            <td>422 m</td></tr>
+        <tr><td>First segment length</td>
+            <td>79 m</td></tr>
+        <tr><td>Sampling band</td><td>near</td></tr>
+        <tr><td>Destination kind</td><td>hill</td></tr>
+      </table>
+      <h3>Verb errors (gap from new_heading to route_bearing)</h3>
+      <table class="verbs">
+        <tr><th>verb</th><th>error</th></tr>
+        <tr style="background:#fff3cd; font-weight:600;"><td>continue ahead</td><td>0.7°</td></tr><tr><td>turn left</td><td>89.3°</td></tr><tr><td>turn right</td><td>90.7°</td></tr><tr><td>turn around</td><td>179.3°</td></tr>
+      </table>
+      <div class="note">GT verb = <b>continue ahead</b>
+       (error 1°)</div>
+    </div>
+    <div class="right">
+      <div id="map2" class="map"></div>
+    </div>
+  </div>
+</section>
+<script>
+(function() {
+  const map = L.map("map2").fitBounds([[47.3724225,8.5376547],
+                                            [47.374470499999994,8.5422008]]);
+  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      maxZoom: 19,
+      attribution: '© OpenStreetMap'
+  }).addTo(map);
+  // walker position
+  L.circleMarker([47.373113799999985, 8.538168100000002], {
+      radius: 8, color: "#1f77b4", fillColor: "#1f77b4", fillOpacity: 0.7
+  }).addTo(map).bindPopup("WALKER · heading 0°");
+  // heading arrow
+  L.polyline([[47.373113799999985, 8.538168100000002], [47.37333902522521, 8.538168100000002]],
+             {color: "#1f77b4", weight: 4, opacity: 0.9}).addTo(map);
+  // route polyline
+  L.polyline([[47.373113799999985, 8.538168100000002], [47.3738173, 8.5381547], [47.3738186, 8.5383643], [47.37387079999999, 8.538454], [47.373895700000006, 8.5388638], [47.37397049999999, 8.5401631], [47.37394339999999, 8.5404582], [47.3735389, 8.5407466], [47.37341249999999, 8.5407517], [47.3734051, 8.5409463], [47.3732679, 8.5413456], [47.3730559, 8.5416959], [47.3729225, 8.5417008]],
+             {color: "#d62728", weight: 5, opacity: 0.7,
+              dashArray: '6,4'}).addTo(map)
+    .bindPopup("OSM shortest path — 12 segment(s)");
+  // destination
+  L.marker([47.3729225, 8.5417008]).addTo(map)
+    .bindPopup("DESTINATION · Lindenhof");
+})();
+</script>
+
+
+<section class="example fixed">
+  <h2>FIXED-3: bahnhofstrasse/frame_00276 → Limmat river (利马特河)</h2>
+  <div class="grid">
+    <div class="left">
+      <img class="qframe" src="file:///C%3A/Users/z0502/Desktop/cs231n/navlm_v2/data/cities/zurich/frames/bahnhofstrasse/frame_00276.jpg" loading="lazy">
+      <table class="info">
+        <tr><td>Heading</td><td><b>0°</b></td></tr>
+        <tr><td>Route bearing (first edge)</td>
+            <td><b>90°</b></td></tr>
+        <tr><td>Route distance</td>
+            <td>327 m</td></tr>
+        <tr><td>First segment length</td>
+            <td>16 m</td></tr>
+        <tr><td>Sampling band</td><td>near</td></tr>
+        <tr><td>Destination kind</td><td>water</td></tr>
+      </table>
+      <h3>Verb errors (gap from new_heading to route_bearing)</h3>
+      <table class="verbs">
+        <tr><th>verb</th><th>error</th></tr>
+        <tr style="background:#fff3cd; font-weight:600;"><td>turn right</td><td>0.5°</td></tr><tr><td>continue ahead</td><td>89.5°</td></tr><tr><td>turn around</td><td>90.5°</td></tr><tr><td>turn left</td><td>179.5°</td></tr>
+      </table>
+      <div class="note">GT verb = <b>turn right</b>
+       (error 0°)</div>
+    </div>
+    <div class="right">
+      <div id="map3" class="map"></div>
+    </div>
+  </div>
+</section>
+<script>
+(function() {
+  const map = L.map("map3").fitBounds([[47.3733173,8.5376547],
+                                            [47.3746269,8.5423601]]);
+  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      maxZoom: 19,
+      attribution: '© OpenStreetMap'
+  }).addTo(map);
+  // walker position
+  L.circleMarker([47.3738173, 8.5381547], {
+      radius: 8, color: "#1f77b4", fillColor: "#1f77b4", fillOpacity: 0.7
+  }).addTo(map).bindPopup("WALKER · heading 0°");
+  // heading arrow
+  L.polyline([[47.3738173, 8.5381547], [47.37404252522522, 8.5381547]],
+             {color: "#1f77b4", weight: 4, opacity: 0.9}).addTo(map);
+  // route polyline
+  L.polyline([[47.3738173, 8.5381547], [47.3738186, 8.5383643], [47.37387079999999, 8.538454], [47.373895700000006, 8.5388638], [47.37397049999999, 8.5401631], [47.37394339999999, 8.5404582], [47.373946100000005, 8.5408364], [47.3741269, 8.5414025], [47.3738439, 8.5418601]],
+             {color: "#d62728", weight: 5, opacity: 0.7,
+              dashArray: '6,4'}).addTo(map)
+    .bindPopup("OSM shortest path — 8 segment(s)");
+  // destination
+  L.marker([47.3738439, 8.5418601]).addTo(map)
+    .bindPopup("DESTINATION · Limmat river");
+})();
+</script>
+
+
+<section class="example multi">
+  <h2>MULTI-1 (boundary): bahnhofstrasse/frame_01392 → Lake Zurich (苏黎世湖)</h2>
+  <div class="grid">
+    <div class="left">
+      <img class="qframe" src="file:///C%3A/Users/z0502/Desktop/cs231n/navlm_v2/data/cities/zurich/frames/bahnhofstrasse/frame_01392.jpg" loading="lazy">
+      <table class="info">
+        <tr><td>Heading</td><td><b>312°</b></td></tr>
+        <tr><td>Route bearing (first edge)</td>
+            <td><b>184°</b></td></tr>
+        <tr><td>Route distance</td>
+            <td>164 m</td></tr>
+        <tr><td>First segment length</td>
+            <td>26 m</td></tr>
+        <tr><td>Sampling band</td><td>near</td></tr>
+        <tr><td>Destination kind</td><td>water</td></tr>
+      </table>
+      <h3>Verb errors (gap from new_heading to route_bearing)</h3>
+      <table class="verbs">
+        <tr><th>verb</th><th>error</th></tr>
+        <tr style="background:#fff3cd; font-weight:600;"><td>turn left</td><td>38.3°</td></tr><tr><td>turn around</td><td>51.7°</td></tr><tr><td>continue ahead</td><td>128.3°</td></tr><tr><td>turn right</td><td>141.7°</td></tr>
+      </table>
+      <div class="note">GT verb = <b>turn left</b>
+       (error 38°)</div>
+    </div>
+    <div class="right">
+      <div id="map101" class="map"></div>
+    </div>
+  </div>
+</section>
+<script>
+(function() {
+  const map = L.map("map101").fitBounds([[47.369816,8.5406935],
+                                            [47.3720158,8.5420846]]);
+  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      maxZoom: 19,
+      attribution: '© OpenStreetMap'
+  }).addTo(map);
+  // walker position
+  L.circleMarker([47.3715158, 8.5415846], {
+      radius: 8, color: "#1f77b4", fillColor: "#1f77b4", fillOpacity: 0.7
+  }).addTo(map).bindPopup("WALKER · heading 312°");
+  // heading arrow
+  L.polyline([[47.3715158, 8.5415846], [47.371666212737715, 8.541337069903928]],
+             {color: "#1f77b4", weight: 4, opacity: 0.9}).addTo(map);
+  // route polyline
+  L.polyline([[47.3715158, 8.5415846], [47.37128690000001, 8.5415633], [47.370877199999995, 8.5413822], [47.37085640000001, 8.541364], [47.37059959999999, 8.5412207], [47.3705239, 8.5411935], [47.370316, 8.5412087], [47.37032039999999, 8.5415174], [47.37032099999999, 8.5415397]],
+             {color: "#d62728", weight: 5, opacity: 0.7,
+              dashArray: '6,4'}).addTo(map)
+    .bindPopup("OSM shortest path — 8 segment(s)");
+  // destination
+  L.marker([47.37032099999999, 8.5415397]).addTo(map)
+    .bindPopup("DESTINATION · Lake Zurich");
+})();
+</script>
+
+</body></html>
